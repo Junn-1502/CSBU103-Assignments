@@ -1,0 +1,35 @@
+body {
+      font-family: Arial, sans-serif; /* Chọn font chữ dễ đọc, phổ biến trên nhiều thiết bị */
+      margin: 40px; /* Tạo khoảng cách xung quanh nội dung để tránh sát mép trình duyệt */
+      background-color: #f4f4f4; 
+      color: #333; 
+}
+
+.cv-container {
+      max-width: 800px; /* Giới hạn chiều rộng để nội dung không quá dài, dễ đọc hơn */
+      margin: auto; /* Căn giữa khối CV trên trang */
+      background-color: #fff; 
+      padding: 30px; /* Tạo khoảng cách bên trong khối để nội dung không bị dính vào viền */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Đổ bóng */
+}
+
+h1, h2 {
+      color: #2c3e50; /* Màu chữ đậm hơn cho tiêu đề, tạo điểm nhấn */
+}
+
+.section {
+      margin-bottom: 40px; /* Tạo khoảng cách giữa các phần để bố cục rõ ràng hơn */
+}
+
+.info {
+      display: flex; /* Sử dụng flexbox để sắp xếp các khối thông tin nằm ngang */
+      justify-content: space-between; /* Căn đều hai khối thông tin sang hai bên */
+}
+
+.info div {
+      width: 48%; /* Mỗi khối chiếm gần một nửa chiều rộng, tạo sự cân đối */
+}
+
+ul {
+      padding-left: 20px; /* Tạo khoảng cách bên trái cho danh sách, giúp dễ nhìn hơn */
+}
