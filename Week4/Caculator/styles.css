@@ -1,0 +1,108 @@
+:root {
+  /* Định nghĩa các biến màu dùng chung */
+  --bg: #0f172a;        /* Màu nền chính */
+  --panel: #111827;     /* Màu nền panel calculator */
+  --key: #1f2937;       /* Màu nền phím */
+  --key-hover: #374151; /* Màu khi hover phím */
+  --accent: #10b981;    /* Màu nhấn (accent) */
+  --danger: #ef4444;    /* Màu cảnh báo/xóa */
+  --text: #e5e7eb;      /* Màu chữ chính */
+  --muted: #9ca3af;     /* Màu chữ phụ/mờ */
+}
+
+* { 
+  box-sizing: border-box; /* Tính toán kích thước gồm cả border và padding */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh; /* Chiều cao tối thiểu toàn màn hình */
+  display: grid;
+  place-items: center; /* Căn giữa calculator */
+  background: radial-gradient(1200px 600px at 20% 20%, #0b1020, #000); /* Gradient nền */
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; /* Font chữ */
+}
+
+.calc {
+  width: 320px;
+  background: var(--panel);
+  border: 1px solid #1f2937;
+  border-radius: 16px; /* Bo góc calculator */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.04); /* Đổ bóng ngoài và trong */
+  overflow: hidden; /* Ẩn phần tràn */
+}
+
+.display {
+  padding: 16px;
+  background: #0b1220; /* Nền màn hình hiển thị */
+  border-bottom: 1px solid #1f2937;
+}
+
+.prev {
+  min-height: 20px;
+  font-size: 0.9rem;
+  color: var(--muted); /* Màu chữ mờ cho phép tính trước */
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Nếu dài quá thì hiển thị ... */
+}
+
+.current {
+  margin-top: 6px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Hiển thị số hiện tại */
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Lưới 4 cột cho các phím */
+  gap: 10px;
+  padding: 16px;
+  background: linear-gradient(180deg, #0f172a, #0b1220); /* Gradient nền cho khu vực phím */
+}
+
+button {
+  appearance: none;
+  border: none;
+  border-radius: 10px; /* Bo góc phím */
+  padding: 14px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--key);
+  box-shadow: 0 2px 0 #0b1020; /* Đổ bóng dưới phím */
+  transition: transform 0.02s ease, background 0.15s ease; /* Hiệu ứng hover/nhấn */
+  cursor: pointer;
+  user-select: none; /* Không cho chọn chữ trên phím */
+}
+
+button:hover { 
+  background: var(--key-hover); /* Đổi màu khi hover */
+}
+
+button:active { 
+  transform: translateY(1px); /* Hiệu ứng nhấn xuống */
+}
+
+.span-2 { 
+  grid-column: span 2; /* Phím chiếm 2 cột (ví dụ phím 0) */
+}
+
+.op { 
+  color: #93c5fd; /* Màu cho các phím toán tử */
+}
+
+.accent { 
+  background: linear-gradient(180deg, #16a34a, #0ea5e9); /* Gradient đặc biệt cho phím bằng */
+  color: white;
+}
+
+.danger { 
+  color: #fecaca; /* Màu cho phím xóa (C/AC) */
+}
