@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Photo Gallery</title> 
+  <link rel="stylesheet" href="style.css"> <!-- Liên kết đến file CSS bên ngoài để định dạng giao diện -->
+</head>
+<body> <!-- Phần nội dung chính -->
+
+  <h1>Photo Gallery</h1> <!-- Tiêu đề chính -->
+
+  <div class="gallery"> <!--Khối chứa ảnh-->
+    <img src="1.jpeg" alt="Gallery"> <!-- Ảnh 1 -->
+    <img src="2.jpg" alt="Gallery"> <!-- Ảnh 2 -->
+    <img src="3.jpg" alt="Gallery"> <!-- Ảnh 3 -->
+    <img src="4.jpg" alt="Gallery"> <!-- Ảnh 4 -->  
+    <img src="5.jpg" alt="Gallery"> <!-- Ảnh 5 -->
+    <img src="6.png" alt="Gallery"> <!-- Ảnh 6 -->
+    <img src="7.jpg" alt="Gallery">
+    <img src="8.webp" alt="Gallery"> <!-- Ảnh 7 -->
+    <img src="9.jpg" alt="Gallery"> <!--
+  </div> <!-- Kết thúc khối gallery -->
+
+  <!-- Modal hiển thị ảnh khi click -->
+  <div class="modal" id="modal"> <!-- Khối modal, ban đầu ẩn -->
+    <span class="close" id="close">&times;</span> <!-- Nút đóng modal (ký hiệu X) -->
+    <span class="nav left" id="prev">&#10094;</span> <!-- Nút điều hướng sang ảnh trước (ký hiệu <) -->
+    <img id="modal-img" src="" alt="Preview"> <!-- Ảnh hiển thị trong modal -->
+    <span class="nav right" id="next">&#10095;</span> <!-- Nút điều hướng sang ảnh sau (ký hiệu >) -->
+
+    <div class="zoom-controls"> <!-- Khối chứa các nút zoom -->
+      <button class="zoom-btn" id="zoom-in">+</button> <!-- Nút phóng to ảnh -->
+      <button class="zoom-btn" id="zoom-out">-</button> <!-- Nút thu nhỏ ảnh -->
+    </div>
+  </div> <!-- Kết thúc  -->
+
+  <script src="script.js"></script> <!-- Liên kết đến file JavaScript để xử lý logic gallery -->
+</body>
+</html> 
